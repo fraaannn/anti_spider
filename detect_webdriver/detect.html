@@ -1,0 +1,104 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Feature Detection</title>
+    <style>
+        .test-table{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+        }
+        td:last-child {
+            background-color: #c8d86d;
+            max-width:300px;
+            word-wrap:break-word;
+        }
+        td.failed {
+            background-color: #f45159;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="test-table">
+    <h1>detect webdriver </h1>
+    <table>
+        <tr>
+            <th>测试特征</th>
+            <th>特征结果</th>
+        </tr>
+        <tr>
+            <td>User Agent</td>
+            <td id="user-agent"></td>
+        </tr>
+        <tr>
+            <td>WebDriver</td>
+            <td id="Webdriver"></td>
+        </tr>
+        <tr>
+            <td>Key</td>
+            <td id="Key"></td>
+        </tr>
+        <tr>
+            <td>Permissions</td>
+            <td id="permissions-result"></td>
+        </tr>
+        <tr>
+            <td>Chrome.runtime</td>
+            <td id="chrome"></td>
+        </tr>
+        <tr>
+            <td>Plugins Length</td>
+            <td id="plugins-length"></td>
+        </tr>
+        <tr>
+            <td>outerWidth</td>
+            <td id="outerWidth"></td>
+        </tr>
+        <tr>
+            <td>outerHeight</td>
+            <td id="outerHeight"></td>
+        </tr>
+        <tr>
+            <td>screen.width</td>
+            <td id="screenWidth"></td>
+        </tr>
+        <tr>
+            <td>screen.height</td>
+            <td id="screenHeight"></td>
+        </tr>
+        <tr>
+            <td>innerWidth</td>
+            <td id="innerWidth"></td>
+        </tr>
+        <tr>
+            <td>innerHeight</td>
+            <td id="innerHeight"></td>
+        </tr>
+        <tr>
+            <td>Languages</td>
+            <td id="languages"></td>
+        </tr>
+        <tr>
+            <td>Chromiun PDF Plugin</td>
+            <td id="Chromiun-PDF"></td>
+        </tr>
+        <tr>
+            <td>Private Evn</td>
+            <td id="Private-Evn"></td>
+        </tr>
+        <tr>
+            <td>WebGL Vendor</td>
+            <td id="webgl-vendor"></td>
+        </tr>
+        <tr>
+            <td>WebGL Renderer</td>
+            <td id="webgl-renderer"></td>
+        </tr>
+    </table>
+</div>
+<script src="detect.js"></script>
+</body>
+</html>
