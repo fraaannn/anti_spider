@@ -1,0 +1,137 @@
+
+<html>
+<head>
+    <title>JSFuck - Write any JavaScript with 6 Characters: []()!+</title>
+    <meta charset="utf-8" />
+    <meta property="og:image" content="http://www.jsfuck.com/preview.png" />
+    <meta name="viewport" content="width=device-width" />
+    <style>
+
+        body {
+            padding: 20px;
+        }
+
+        body, * {
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.4em;
+        }
+
+        h1 {
+            font-size: 2em;
+            position: absolute;
+            top: 70px;
+            font-weight: normal;
+            left: 140px;
+        }
+
+        h2 {
+            width: 90px;
+            text-align: right;
+            padding: 50px 5px 5px;
+            background: #F0DB4E;
+            color: #323230;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1em;
+        }
+
+        h3 {
+            font-weight: bold;
+        }
+
+        p, li, textarea, .actions {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        textarea {
+            display: block;
+            height: 200px;
+            margin: 1em 0;
+        }
+
+        ul.pre li{
+            white-space: pre;
+        }
+
+        .checkbox {
+            display: inline-block;
+        }
+
+        .actions a {
+            float: right;
+        }
+
+        .actions {
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<h1>JSFuck</h1>
+
+<h2>()+<br>[]!</h2>
+
+<p>Use the form below to convert your own script. Uncheck "eval source" to
+    get back a plain string.</p>
+
+<input id="input" type="text" value="alert(1)"/>
+<button id="encode" type="text">Encode</button>
+
+<div class="checkbox">
+    <input id="eval" type="checkbox" checked />
+    <label for="eval">Eval Source</label>
+</div>
+
+<textarea id="output"></textarea>
+<div class="actions">
+    <span id="stats">…</span>
+    <a id="run" href="#">Run This</a>
+</div>
+
+
+<script src="jsfuck.js"></script>
+<script>
+
+    function $(id){
+        return document.getElementById(id);
+    }
+
+    function encode(){
+        var output = JSFuck.encode($("input").value, $("eval").checked);
+        $("output").value = output;
+        $("stats").innerHTML = output.length + " chars";
+    }
+
+    $("encode").onclick = encode;
+    $("eval").onchange = encode;
+
+    encode();
+
+    $("run").onclick = function(){
+        value = eval($("output").value);
+
+        if (!$("eval").checked){
+            alert('"' + value + '"');
+        }
+        return false;
+    };
+</script>
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-57649-11']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+</html>
